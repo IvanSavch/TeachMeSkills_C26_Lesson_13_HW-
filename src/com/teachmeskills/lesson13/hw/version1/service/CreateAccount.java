@@ -4,7 +4,7 @@ import com.teachmeskills.lesson13.hw.custom_exeption.WrongLoginException;
 import com.teachmeskills.lesson13.hw.custom_exeption.WrongPasswordException;
 
 public class CreateAccount {
-    public static void crateAccount (String login,String password,String confirmPassword)
+    public static boolean crateAccount (String login,String password,String confirmPassword)
             throws WrongLoginException,
                    WrongPasswordException
     {
@@ -16,5 +16,6 @@ public class CreateAccount {
                 || !(password.equals(confirmPassword))) {
             throw new WrongPasswordException("wrong password");
         }
+        return true;
     }
 }

@@ -23,9 +23,10 @@ import com.teachmeskills.lesson13.hw.vesion2.service.CreateAccount;
 public class Runner {
     public static void main(String[] args) {
         try {
-            CreateAccount.createAccount2("Ivan Sav","1 Savch","1 Savch");
+            System.out.println(CreateAccount.createAccount2("IvanSav","1Savch","1 Savch"));
         } catch (WrongLoginException | WrongPasswordException e) {
             System.out.println( e.getMessage());
         }
+
     }
 }

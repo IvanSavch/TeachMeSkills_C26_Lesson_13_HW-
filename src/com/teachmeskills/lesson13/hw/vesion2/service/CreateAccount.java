@@ -4,7 +4,7 @@ import com.teachmeskills.lesson13.hw.custom_exeption.WrongLoginException;
 import com.teachmeskills.lesson13.hw.custom_exeption.WrongPasswordException;
 
 public class CreateAccount {
-    public static void createAccount2 (String login,String password,String confirmPassword)
+    public static boolean createAccount2 (String login,String password,String confirmPassword)
     throws WrongLoginException,
            WrongPasswordException
     {
@@ -36,5 +36,6 @@ public class CreateAccount {
         if (count == 0) {
             throw new WrongPasswordException("must be at least 1 digit");
         }
+        return true;
     }
 }
